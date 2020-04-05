@@ -52,7 +52,7 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     pcl::ExtractIndices<PointT> extract;
     extract.setInputCloud (cloud);
     extract.setIndices (inliers);
-    extract.setNegative (false);
+    extract.setNegative (true);
     extract.filter(*obstCloud);
 
     std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> segResult(obstCloud, planeCloud);

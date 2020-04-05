@@ -56,8 +56,8 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
 
     // we are using -> beacuse we are allocating the memory on heap. if it was stack we could have used . before SegmentPlane
     std::pair<pcl::PointCloud<pcl::PointXYZ>::Ptr, pcl::PointCloud<pcl::PointXYZ>::Ptr> segmentCloud = pointProcessor->SegmentPlane(inputCloud, 100, 0.2);
-    renderPointCloud(viewer,segmentCloud.first,"planeCloud",Color(0,1,0));
-    renderPointCloud(viewer,segmentCloud.second,"obstCloud",Color(1,0,0));
+    renderPointCloud(viewer,segmentCloud.first,"obstCloud",Color(1,0,0));
+    renderPointCloud(viewer,segmentCloud.second,"planeCloud",Color(0,1,0));
 
 }
 
